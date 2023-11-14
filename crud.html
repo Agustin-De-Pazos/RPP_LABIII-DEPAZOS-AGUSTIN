@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap">
+    <script src="./js/crud.js" type="module"></script>
+    <title>HALLOWIN DE PAZOS</title>
+  </head>
+  <body>
+    <header>
+      <img
+        id="logoHeader"
+        src="./assets/descarga.jpg"
+        alt="logo de la pagina"
+      />
+      <nav class="navMedia">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="#">MONSTRUOS</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="h1form">CRUD MONSTRUOS</h1>
+      <section class="seccion-formulario">
+        <div id="alerta" class="modal">
+          <div class="modal-content">
+            <span class="close" id="cerrar">&times;</span>
+            <p id="modalMessage"></p>
+          </div>
+        </div>
+        <fieldset>
+          <h2>INFORMACION DEL MONSTRUO</h2>
+          <form class="formulario1">
+            <label class="lblNombre">NOMBRE:</label>
+            <p>
+              <input
+                class="inputDefect"
+                type="text"
+                name="txtNombre"
+                placeholder="INGRESE NOMBRE"
+                autocomplete="off"
+              />
+            </p>
+            <p>
+                <div class="divsIconosForm">
+                  <img
+                    id="iconoMascara"
+                    src="./assets/mascara.svg"
+                    alt="Icono Mascara"
+                  />
+                  <label class="lblAlias">ALIAS:</label>
+                </div>
+            </p>
+            <input id="ALIAS" class="inputDefect" type="text" name="txtAlias" placeholder="INGRESE ALIAS"/>
+            <p>
+              <div class="divsIconosForm">
+                <img
+                id="iconoDefensa"
+                src="./assets/defensa.svg"
+                alt="Icono Defensa"/>
+                <label class="lblDefensa">DEFENSA:</label>
+              </div>
+            </p>
+            <div>
+              <input class="inputDefensa" type="radio" name="rdoDefensa" value="POCION" checked />
+              <label class="lblTipoDefensa">POCION:</label>
+              <input class="inputDefensa" type="radio" name="rdoDefensa" value="CRUCIFIJO" />
+              <label class="lblTipoDefensa">CRUCIFIJO:</label>
+              <input class="inputDefensa" type="radio" name="rdoDefensa" value="ESTACA" />
+              <label class="lblTipoDefensa">ESTACA:</label>
+              <input class="inputDefensa" type="radio" name="rdoDefensa" value="PLATA" />
+              <label class="lblTipoDefensa">PLATA:</label>
+            </div>
+            <p>
+              <img
+              id="imgMiedo"
+              src="./assets/miedo.svg"
+              alt="Icono Miedo"
+              />
+              <label class="lblMiedo">MIEDO:</label>
+            </p>
+            <p>
+              <input id="inputMiedo" type="range" name="txtMiedo" value="" />
+            </p>
+            <p>
+              <div class="divsIconosForm">
+                <img
+                id="imgMonstruo"
+                src="./assets/monstruo.svg"
+                alt="Icono Miedo"/>
+                <label class="lblMonstruo">MONSTRUO:</label>
+              </div>
+            </p>
+            <p>
+              <select
+              class="select"
+              name="selectMonstruo"
+              id="selectMonstruo"
+              value="ESQUELETO"
+              ></select>
+            </p>
+            <p>
+              <div class="divsIconosForm">
+                <img
+                id="imgMonstruo"
+                src="./assets/habilidad.svg"
+                alt="Icono Miedo"/>
+                <label class="lblMonstruo">MONSTRUO:</label>
+              </div>
+            </p>
+            <p>
+              <select
+              class="select"
+              name="selectHabilidad"
+              id="selectHabilidad"
+              value="ESQUELETO"
+              ></select>
+            </p>
+              <div class="botones">
+                <input id="btnGuardar" class="btnGuardar" type="submit" value="Guardar" />
+                <input hidden id="btnEliminar" class="ocultarBoton" type="button" value="Eliminar Monstruo"/>
+                <input  id="btnCancelar" class="ocultarBoton" type="button" value="Cancelar"/>
+                <input type="hidden" name="txtId" />
+          </form>
+        </fieldset>
+      </section>
+      <section class="seccion-tabla">
+        <fieldset class="fieldsetTabla">
+          <legend>EDIT</legend>
+          <div class="spinner" id="divSpinner"></div>
+          <div hidden id="tabla"></div>
+        </fieldset>
+      </section>
+    </main>
+    <footer>
+      <nav class="navMedia">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="#">MONSTRUOS</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <p class="copy">LABORATORIO III - TODOS LOS DERECHOS RESERVADOS 2025 &copy;</p>
+    </footer>
+  </body>
+</html>
